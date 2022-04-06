@@ -8,21 +8,33 @@ document.getElementById("year").innerHTML = d.getFullYear();
 
 
 
+
+
+
+
+
+
+
 //Add Task
-var submitButton=document.getElementById('submitButton').addEventListener('click',addTask);
+
+
+var count=0;
+var submitButton=document.getElementById('submitButton').addEventListener('click',addTask)  ;
+
 function addTask(){
-    //Fetch value from the form
+        //Fetch value from the form
     var taskName=document.getElementById('addToDo');
     taskName=taskName.value;
     var taskCategory= document.getElementById('taskCategory');
     taskCategory= taskCategory.value;
     var DueDate= document.getElementById('dueDate');
 
-    //Adding the task Details HTML and Values which were fetched above  
 
+    //Adding the task Details HTML and Values which were fetched above  
+    count+=1;
     var taskDiv=document.createElement('div');
     taskDiv.setAttribute("class","task");
-    taskDiv.setAttribute("id","task");
+    taskDiv.setAttribute("id",count);
     var appendTaskDiv=document.getElementById('list').appendChild(taskDiv);
 
     var taskAndDate=document.createElement('div');
@@ -30,9 +42,9 @@ function addTask(){
     appendTaskDiv.appendChild(taskAndDate);
 
 
-    var delTrash=document.createElement('i');
+    var delTrash=document.createElement('a');
     delTrash.setAttribute("class","fa-solid fa-trash-can del-task");
-    delTrash.setAttribute("id","del-task");
+    delTrash.setAttribute("id","del-task"+""+count);
     appendTaskDiv.appendChild(delTrash);
 
     var heading=document.createElement('h3');
@@ -54,24 +66,22 @@ function addTask(){
     taskAndDate.appendChild(divDate);
     
 
-    var iCalendar=document.createElement('a');
+    var iCalendar=document.createElement('i');
     iCalendar.setAttribute("class","fa-solid fa-calendar");
     divDate.appendChild(iCalendar);
 
-    iCalendar.innerHTML=dueDate.value;
+    iCalendar.innerHTML=" "+dueDate.value;
+
+
+            //Delete Tasks
+        var delButton=document.getElementById('del-task'+""+count);
+        var delTaskDiv=document.getElementById(count);
+        // console.log(delButton,delTaskDiv);
+        delButton.addEventListener('click',()=> delTaskDiv.remove());
+
     
 }
 
 
-
-//Delete Tasks
-var delButton=document.getElementById('del-task');
-delButton.addEventListener('click',delTask);
-var delTaskDiv=document.getElementById("task");
-
-function delTask(){
-    console.log(delTaskDiv);
-    delTaskDiv.remove();
-}
 
 
