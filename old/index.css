@@ -1,0 +1,151 @@
+/*-------OverAll css -------*/
+body{
+    font-family: 'Raleway', sans-serif;
+    background: rgb(203,255,254);
+    /* background-size: 100%; */
+    /* background: linear-gradient(133deg, rgba(203,255,254,1) 0%, rgba(194,220,255,1) 72%); */
+}
+#toDoList{
+    background-color: white;
+    transform: translate(0, 10%);
+    width: 25vw;
+    min-height: 70vh;
+    box-shadow: 1px 1px 20px grey;
+    /* border: 1px soli0 black; */
+    margin: auto;
+}
+/*-------Uppar Part---------*/
+#outputContainer{
+    display: block;
+    max-height: 30%;
+    background: rgb(75,94,255);
+    background: linear-gradient(90deg, rgba(75,94,255,1) 0%, rgba(245,187,255,1) 96%);
+}
+
+#list{
+    
+    background-color: whitesmoke;
+    margin:-10% 10%;
+    box-shadow: 1px 1px 10px lightgray;
+    width: 20vw;
+    min-height: 50vh;
+}
+#formContainer{
+    
+    position: relative;
+    width: 90%;
+    height: 50%;
+    margin: auto;
+    text-align: center;
+
+}
+#dateContainer{
+    padding-bottom: 3%;
+    margin-left: 15%;
+    width:30%;
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    /* justify-content: space-around; */
+    font-size: 1.7rem;
+}
+
+#monthYear{
+    display: inline-block;
+    margin-left: 15px   ;
+}
+
+#date{
+    margin-top: 27%;
+    color: yellow;
+    font-weight: 1000;
+}
+#month{
+    margin-bottom: 0;
+}
+#year{
+    margin-top:0 ;
+}
+#action{
+    color:black;
+    position: relative;
+    padding:30% 40%;
+    width: 50%;
+    display: flex;
+    
+}
+#delAll, #delSelected{
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: 900;
+    padding:10px;
+       
+    
+}
+#addTask{
+    position: relative;
+    text-align: center;
+    margin: auto;
+    height: 100%;
+}
+#plusFont{
+    font-size: 2.5rem;
+    color: white;
+    padding-left: 2% ;
+    
+
+}
+#plusFont:hover{
+    color: whitesmoke;
+}
+
+#addToDo{
+    margin-top:10% ;
+    padding: 20px;
+    border: none;
+    box-shadow: 1px 1px 10px lightgray;
+    font-size: 1.5rem;
+    border-radius:6px ;
+    
+}
+
+
+.task{
+    padding: 2px;
+    margin:4% auto;
+    background-color: white;
+    width:90%;
+    height: 10%;
+    box-shadow: 2px 2px 7px lightgray;
+    display: flex;
+    flex-wrap: nowrap;
+    /* justify-content: space-around; */
+
+}
+
+.randomColors{
+    margin-right:10px;
+    position: relative;
+    height: 10vh;
+    width: 2%;
+    
+}
+
+.taskLabel{
+    margin: auto 0;
+    font-size: 1.4rem;
+    /* width:70% */
+}
+
+.task:hover >.fa-trash{
+    display: inline-block !important;
+    
+}
+
+.fa-trash{
+    display: none !important; 
+    padding:5px;
+    margin:auto auto auto 50%;
+}
+
+
