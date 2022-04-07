@@ -7,14 +7,6 @@ document.getElementById("month").innerHTML = monthArr[d.getMonth()];
 document.getElementById("year").innerHTML = d.getFullYear();
 
 
-
-
-
-
-
-
-
-
 //Add Task
 
 
